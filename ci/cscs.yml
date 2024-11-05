@@ -13,6 +13,7 @@ build uenv:
     STACK_SYSTEM: $system
     STACK_TAG: latest
     STACK_NAME: $CSCS_REGISTRY_PATH/public/$CI_PIPELINE_ID/$name/$version
+    STACK_UARCH: $uarch
     F7T_URL: 'https://invalid-url'
     UENV_LOCAL: 'NO'
     SLURM_TIMEOUT: '04:00:00'
