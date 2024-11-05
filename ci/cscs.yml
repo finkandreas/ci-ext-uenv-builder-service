@@ -11,10 +11,10 @@ build uenv:
   variables:
     STACK_RECIPE: recipe
     STACK_SYSTEM: $system
-    STACK_TAG: latest
+    STACK_TAG: $CI_PIPELINE_ID
     STACK_NAME: $name/$version
     STACK_UARCH: $uarch
-    STACK_REPO_DIR: $CSCS_REGISTRY_PATH/public/$CI_PIPELINE_ID
+    STACK_REPO_DIR: $CSCS_REGISTRY_PATH/public/$system/$uarch
     F7T_URL: 'https://invalid-url'
     UENV_LOCAL: 'NO'
     SLURM_TIMELIMIT: '04:00:00'
