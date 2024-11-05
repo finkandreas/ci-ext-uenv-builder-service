@@ -11,7 +11,8 @@ build uenv:
   variables:
     STACK_RECIPE: recipe
     STACK_SYSTEM: $system
-    STACK_NAME: $CSCS_REGISTRY_PATH/public/$CI_PIPELINE_ID/$name/$version:latest
+    STACK_TAG: latest
+    STACK_NAME: $CSCS_REGISTRY_PATH/public/$CI_PIPELINE_ID/$name/$version
     F7T_URL: 'https://invalid-url'
     UENV_LOCAL: 'NO'
     SLURM_TIMEOUT: '04:00:00'
