@@ -17,21 +17,21 @@ build uenv:
     F7T_URL: 'https://invalid-url'
     UENV_LOCAL: 'NO'
     SLURM_TIMEOUT: '04:00:00'
-    rules:
-      - if: $STACK_SYSTEM == "daint"
-        variables:
-          F7T_URL: "https://api.cscs.ch/hpc/firecrest/v1"
-          ARCH: 'aarch64'
-      - if: $STACK_SYSTEM == "todi"
-        variables:
-          F7T_URL: "https://api.cscs.ch/cscs/firecrest/v1"
-          ARCH: 'aarch64'
-      - if: $STACK_SYSTEM == "eiger"
-        variables:
-          F7T_URL: 'https://firecrest.cscs.ch'
-          SLURM_CONSTRAINT: mc
-          ARCH: 'x86_64'
-      - if: $STACK_SYSTEM == "balfrin"
-        variables:
-          F7T_URL: 'https://api.cscs.ch/mch/firecrest/v1'
-          ARCH: 'x86_64'
+  rules:
+    - if: $STACK_SYSTEM == "daint"
+      variables:
+        F7T_URL: "https://api.cscs.ch/hpc/firecrest/v1"
+        ARCH: 'aarch64'
+    - if: $STACK_SYSTEM == "todi"
+      variables:
+        F7T_URL: "https://api.cscs.ch/cscs/firecrest/v1"
+        ARCH: 'aarch64'
+    - if: $STACK_SYSTEM == "eiger"
+      variables:
+        F7T_URL: 'https://firecrest.cscs.ch'
+        SLURM_CONSTRAINT: mc
+        ARCH: 'x86_64'
+    - if: $STACK_SYSTEM == "balfrin"
+      variables:
+        F7T_URL: 'https://api.cscs.ch/mch/firecrest/v1'
+        ARCH: 'x86_64'
