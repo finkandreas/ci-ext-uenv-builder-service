@@ -4,12 +4,14 @@ include:
 stages:
   - build
 
-
 build uenv:
   extends: ['.f7t-runner', '.uenv-builder']
+  tags: [f7t-runner-tds] # TODO: remove this tag, that should not run on the TDS runner
   stage: build
   variables:
     STACK_RECIPE: recipe
+    STACK_SYSTEM: $system
+    STACK_NAME: $CSCS_REGISTRY_PATH/public/$CI_PIPELINE_ID/$name/$version:latest
     F7T_URL: 'https://invalid-url'
     SLURM_TIMEOUT: '04:00:00'
     rules:
