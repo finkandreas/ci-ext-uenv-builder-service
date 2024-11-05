@@ -21,17 +21,21 @@ build uenv:
     - if: $system == "daint"
       variables:
         F7T_URL: "https://api.cscs.ch/hpc/firecrest/v1"
+        FIRECREST_SYSTEM: daint
         ARCH: 'aarch64'
     - if: $system == "todi"
       variables:
         F7T_URL: "https://api.cscs.ch/cscs/firecrest/v1"
+        FIRECREST_SYSTEM: todi
         ARCH: 'aarch64'
     - if: $system == "eiger"
       variables:
         F7T_URL: 'https://firecrest.cscs.ch'
+        FIRECREST_SYSTEM: eiger
         SLURM_CONSTRAINT: mc
         ARCH: 'x86_64'
     - if: $system == "balfrin"
       variables:
         F7T_URL: 'https://api.cscs.ch/mch/firecrest/v1'
+        FIRECREST_SYSTEM: balfrin
         ARCH: 'x86_64'
