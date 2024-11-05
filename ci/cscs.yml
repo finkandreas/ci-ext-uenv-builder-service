@@ -5,7 +5,7 @@ stages:
   - build
 
 build uenv:
-  extends: ['.f7t-runner', '.uenv-builder']
+  extends: ['.f7t-runner', '.f7t-uenv-builder']
   tags: [f7t-runner-tds] # TODO: remove this tag, that should not run on the TDS runner
   stage: build
   variables:
