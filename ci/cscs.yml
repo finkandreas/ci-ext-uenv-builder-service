@@ -8,12 +8,13 @@ build uenv:
   extends: ['.f7t-runner', '.f7t-uenv-builder']
   stage: build
   variables:
-    STACK_RECIPE: recipe
-    STACK_SYSTEM: $system
-    STACK_TAG: $CI_PIPELINE_ID
-    STACK_NAME: $name/$version
-    STACK_UARCH: $uarch
-    STACK_REPO_DIR: $CSCS_REGISTRY/uenv/service/$system/$uarch
+    UENV_RECIPE: recipe
+    UENV_SYSTEM: $system
+    UENV_TAG: $CI_PIPELINE_ID
+    UENV_NAME: $name
+    UENV_VERSION: $version
+    UENV_UARCH: $uarch
+    UENV_REPO_DIR: $CSCS_REGISTRY/uenv/service/$system/$uarch
     F7T_URL: 'https://invalid-url'
     UENV_LOCAL: 'NO'
     SLURM_TIMELIMIT: '04:00:00'
