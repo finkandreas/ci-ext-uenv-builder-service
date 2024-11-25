@@ -26,7 +26,7 @@ build uenv:
         ARCH: 'aarch64'
     - if: $system == "todi"
       variables:
-        F7T_URL: "https://api.cscs.ch/cscs/firecrest/v1"
+        F7T_URL: "https://api.cscs.ch/hpc/firecrest/v1"
         FIRECREST_SYSTEM: todi
         ARCH: 'aarch64'
     - if: $system == "eiger"
