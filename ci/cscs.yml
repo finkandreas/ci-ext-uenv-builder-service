@@ -31,7 +31,7 @@ build uenv:
         ARCH: 'aarch64'
     - if: $system == "eiger"
       variables:
-        F7T_URL: 'https://firecrest.cscs.ch'
+        F7T_URL: "https://api.cscs.ch/hpc/firecrest/v1"
         FIRECREST_SYSTEM: eiger
         SLURM_CONSTRAINT: mc
         ARCH: 'x86_64'
