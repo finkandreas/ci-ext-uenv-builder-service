@@ -24,10 +24,15 @@ build uenv:
         F7T_URL: "https://api.cscs.ch/hpc/firecrest/v1"
         FIRECREST_SYSTEM: daint
         ARCH: 'aarch64'
-    - if: $system == "todi"
+    - if: $system == "santis"
       variables:
-        F7T_URL: "https://api.cscs.ch/hpc/firecrest/v1"
-        FIRECREST_SYSTEM: todi
+        F7T_URL: "https://api.cscs.ch/cw/firecrest/v1"
+        FIRECREST_SYSTEM: santis
+        ARCH: 'aarch64'
+    - if: $system == "clariden"
+      variables:
+        F7T_URL: "https://api.cscs.ch/ml/firecrest/v1"
+        FIRECREST_SYSTEM: clariden
         ARCH: 'aarch64'
     - if: $system == "eiger"
       variables:
