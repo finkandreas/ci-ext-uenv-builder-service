@@ -33,6 +33,7 @@ build uenv:
       variables:
         F7T_URL: "https://api.cscs.ch/ml/firecrest/v1"
         FIRECREST_SYSTEM: clariden
+        SLURM_ACCOUNT: 'a-djenkssl'
         ARCH: 'aarch64'
     - if: $system == "eiger"
       variables:
