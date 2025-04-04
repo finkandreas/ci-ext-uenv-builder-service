@@ -46,3 +46,11 @@ build uenv:
         F7T_URL: 'https://api.cscs.ch/mch/firecrest/v1'
         FIRECREST_SYSTEM: balfrin
         ARCH: 'x86_64'
+    - if: $system == "beverin"
+      variables:
+        F7T_URL: "https://api.tds.cscs.ch/stp/firecrest/v2"
+        F7T_TOKEN_URL: "https://auth-tds.cscs.ch/auth/realms/firecrest-clients/protocol/openid-connect/token"
+        F7T_CLIENT_ID: $F7T_TDS_CLIENT_ID
+        F7T_CLIENT_SECRET: $F7T_TDS_CLIENT_SECRET
+        FIRECREST_SYSTEM: beverin
+        ARCH: 'x86_64'
