@@ -15,7 +15,7 @@ build uenv:
     UENV_VERSION: $version
     UENV_UARCH: $uarch
     UENV_REPO_DIR: $CSCS_REGISTRY/uenv/service/$system/$uarch
-    F7T_URL: 'https://invalid-url'
+    F7T_URL: "https://api.cscs.ch/hpc/firecrest/v1"
     UENV_LOCAL: 'NO'
     SLURM_TIMELIMIT: '04:00:00'
   rules:
@@ -70,3 +70,5 @@ build uenv:
         FIRECREST_SYSTEM: beverin
         SLURM_PARTITION: mi300
         ARCH: 'x86_64'
+    # make sure a job is always added, then maybe the job output will give a better description why it failed
+    - when: always
