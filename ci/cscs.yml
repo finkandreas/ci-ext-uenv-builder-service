@@ -15,41 +15,41 @@ build uenv:
     UENV_VERSION: $version
     UENV_UARCH: $uarch
     UENV_REPO_DIR: $CSCS_REGISTRY/uenv/service/$system/$uarch
-    F7T_URL: "https://api.cscs.ch/hpc/firecrest/v1"
+    F7T_URL: "https://api.cscs.ch/hpc/firecrest/v2"
     UENV_LOCAL: 'NO'
     SLURM_TIMELIMIT: '04:00:00'
   rules:
     - if: $system == "daint"
       variables:
-        F7T_URL: "https://api.cscs.ch/hpc/firecrest/v1"
+        F7T_URL: "https://api.cscs.ch/hpc/firecrest/v2"
         FIRECREST_SYSTEM: daint
         ARCH: 'aarch64'
     - if: $system == "santis"
       variables:
-        F7T_URL: "https://api.cscs.ch/cw/firecrest/v1"
+        F7T_URL: "https://api.cscs.ch/cw/firecrest/v2"
         FIRECREST_SYSTEM: santis
         ARCH: 'aarch64'
     - if: $system == "clariden"
       variables:
-        F7T_URL: "https://api.cscs.ch/ml/firecrest/v1"
+        F7T_URL: "https://api.cscs.ch/ml/firecrest/v2"
         FIRECREST_SYSTEM: clariden
         SLURM_ACCOUNT: 'a-djenkssl'
         ARCH: 'aarch64'
     - if: $system == "bristen"
       variables:
-        F7T_URL: "https://api.cscs.ch/ml/firecrest/v1"
+        F7T_URL: "https://api.cscs.ch/ml/firecrest/v2"
         FIRECREST_SYSTEM: bristen
         SLURM_ACCOUNT: 'a-djenkssl'
         ARCH: 'x86_64'
     - if: $system == "eiger"
       variables:
-        F7T_URL: "https://api.cscs.ch/hpc/firecrest/v1"
+        F7T_URL: "https://api.cscs.ch/hpc/firecrest/v2"
         FIRECREST_SYSTEM: eiger
         SLURM_CONSTRAINT: mc
         ARCH: 'x86_64'
     - if: $system == "balfrin"
       variables:
-        F7T_URL: 'https://api.cscs.ch/mch/firecrest/v1'
+        F7T_URL: 'https://api.cscs.ch/mch/firecrest/v2'
         FIRECREST_SYSTEM: balfrin
         ARCH: 'x86_64'
     - if: $system == "beverin" && $uarch == "mi200"
